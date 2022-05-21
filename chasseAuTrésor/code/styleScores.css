@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background-image: url(images/fond-carte.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: center;
+}
+
+/* Popup de fin de partie */
+#popupFinP {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    transition: opacity .4s;
+}
+
+.popupFinP {
+    margin: 6rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    width: 45%;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+
+.popupFinP .cross {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: #333;
+}
+
+/* Style du tableau des scores */
+#tableS {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#thS,
+#tdS {
+    text-align: center;
+    padding: 3px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#tableS {
+    margin: 10px;
+}
+
+/* Style du bouton retour */
+#btnRetourJeu {
+    background: rgb(41, 166, 41);
+    border-radius: 5px;
+    padding: 6px;
+}
+
+#btnRetourJeu:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#btnRetourJeu:active {
+    transform: scale(1.0);
+    background: green;
+}

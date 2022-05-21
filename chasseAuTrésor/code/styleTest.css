@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background-image: url(images/fond-carte.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: center;
+}
+
+/* grille de jeu */
+.grilleJeuArcade {
+    background: url(images/ile_maudite.png);
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    border-collapse: collapse;
+    height: 542px;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+/* Case d'informations */
+.InfosArcade {
+    background: url(images/parchemin_2_apres.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100px;
+    width: 400px;
+    margin: 100px;
+    border-radius: 10px;
+    padding: 100px;
+}
+
+/* Style des cases une fois cochées */
+.caseNeutre {
+    background-color: rgb(166, 166, 255);
+    opacity: 0.5;
+}
+
+.CaseNeutreMoyenProche {
+    background-color: rgb(91, 91, 252);
+    opacity: 0.5;
+}
+
+.CaseNeutreProche {
+    background-color: blue;
+    opacity: 0.5;
+}
+
+.tresor{
+    background-color: yellow;
+    opacity: 0.5;
+}
+
+.malus{
+    background-color: black;
+    opacity: 0.5;
+}
+
+.bonus{
+    background-color: green;
+    opacity: 0.5;
+}
+
+/* Popup de fin de partie */
+#popupFinP {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    transition: opacity .4s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popupFinP {
+    margin: 6rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    width: 45%;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+
+.popupFinP .cross {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: #333;
+}
+
+#messageF {
+    padding-top: 10px;
+}
+
+/* Popup des règles */
+#popupRegles {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    transition: opacity .4s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popupRegles {
+    margin: 6rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    width: 45%;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+
+.popupRegles .cross {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: #333;
+}
+
+#messageR {
+    padding-top: 10px;
+}
+
+/* Popup de changement de pseudo */
+#popupChangePseudo {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    transition: opacity .4s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popupChangePseudo {
+    margin: 6rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    width: 45%;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+
+.popupChangePseudo .cross {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: #333;
+}
+
+#messageCP {
+    padding-top: 10px;
+}
+
+/* Style du bouton des scores */
+#btnScores {
+    background: rgb(41, 166, 41);
+    border-radius: 5px;
+    padding: 6px;
+}
+
+#btnScores:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#btnScores:active {
+    transform: scale(1.0);
+    background: green;
+}
+
+/* Style des bourons d'interactions */
+.inpoutI{
+    display: flex;
+}
+
+/* Style du bouton rejouer */
+#btnRejouer {
+    background: rgb(177, 78, 78);
+    border-radius: 5px;
+    padding: 6px;
+    margin: 5px;
+}
+
+#btnRejouer:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#btnRejouer:active {
+    transform: scale(1.0);
+    background: brown;
+}
+
+/* Style du bouton des règles */
+#btnRegles {
+    background: rgb(177, 78, 78);
+    border-radius: 5px;
+    padding: 6px;
+    margin: 5px;
+}
+
+#btnRegles:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#btnRegles:active {
+    transform: scale(1.0);
+    background: brown;
+}
+
+/* Style du bouton du pseudo */
+#ChangePseudo {
+    background: rgb(177, 78, 78);
+    border-radius: 5px;
+    padding: 6px;
+    margin: 5px;
+}
+
+#ChangePseudo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#ChangePseudo:active {
+    transform: scale(1.0);
+    background: brown;
+}
+
+/* Style du bouton de validation du pseudo */
+#ValiderPseudo {
+    background: rgb(41, 166, 41);
+    border-radius: 5px;
+    padding: 6px;
+}
+
+#ValiderPseudo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#ValiderPseudo:active {
+    transform: scale(1.0);
+    background: green;
+}
+
+/* Style du bouton easter egg */
+#easterEgg {
+    background-color: white;
+    border: none;
+}
+
+
+/* Rendre invisible le tableau des scores tant que le joueur ne clique pas sur le bouton */
+/* #tabScores{
+    display: none;
+} */
+
+/* Style du tableau des scores */
+/* #tableS {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#thS,
+#tdS {
+    text-align: center;
+    padding: 3px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#tableS {
+    margin: 10px;
+} */

@@ -1,0 +1,10 @@
+Create database chasseautresor;
+
+use chasseautresor;
+
+create table tabscores (
+	id integer AUTO_INCREMENT not null,
+    pseudo varchar(20) not null,
+    score integer not null,
+    dateJour date not null,
+    PRIMARY key (id));

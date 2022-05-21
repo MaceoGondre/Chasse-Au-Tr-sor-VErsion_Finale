@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background-image: url(images/AcceuilBateau.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* text-align: center; */
+    justify-content: center;
+}
+
+.main {
+    background-color: whitesmoke;
+    opacity: 0.85;
+    padding: 20px;
+    margin: 50px 30px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* Style du bouton qui lance le jeu */
+#btnGo {
+    background-color: burlywood;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#btnGo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#btnGo:active {
+    transform: scale(1);
+    background-color: rgb(198, 177, 149);
+}
+
+
+/* .btnStart {
+    background-color: burlywood;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btnStart:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.btnStart:active {
+    transform: scale(1);
+    background-color: rgb(198, 177, 149);
+}
+
+.btncontexte {
+    background-color: burlywood;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btncontexte:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.btncontexte:active {
+    transform: scale(1);
+    background-color: rgb(198, 177, 149);
+} */
